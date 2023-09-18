@@ -1,6 +1,6 @@
 # open-interpreter-docker
 
-open interpreter docker environment
+[Open Interpreter](https://github.com/KillianLucas/open-interpreter) docker environment
 
 ## Setup
 
