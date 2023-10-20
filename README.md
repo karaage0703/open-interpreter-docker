@@ -24,7 +24,11 @@ $ docker build -t open-interpreter-simple ./container-simple
 ```sh
 $ cd ~/open-interpreter-docker
 $ docker run -it --rm -v $(pwd):/root open-interpreter-simple
+
+# with environmental variables
+$ docker run -it --rm -e OPENAI_API_KEY=<OPENAI_API_KEY> -v $(pwd):/root open-interpreter-simple
 ```
+
 
 ### Run app
 Execute following command in container:
@@ -49,7 +53,10 @@ $ docker build -t open-interpreter-gui ./container-gui
 
 ```sh
 $ cd ~/open-interpreter-docker
-$ docker run -v $(pwd):/root -p 6080:80 open-interpreter-gui
+$ docker run --rm -v $(pwd):/root -p 6080:80 open-interpreter-gui
+
+# with environmental variables
+$ docker run --rm -e OPENAI_API_KEY=<OPENAI_API_KEY> -v $(pwd):/root -p 6080:80 open-interpreter-gui
 ```
 
 ### Run app
